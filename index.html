@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- seo -->
+  <title>LoL Idle · Jogo idle INSPIRADO EM League of Legends grátis no navegador</title>
+  <meta name="description" content="Jogo idle de League of Legends grátis no navegador: escolha Darius, Ezreal, Lux, Yasuo, Katarina, Taric, Zac, Ryze, Aphelios, Sona, Shaco ou Rengar, cace sozinho em Summoner's Rift ou explore Runeterra com cidades, fortalezas e PvP. Sem baixar nada.">
+  <link rel="canonical" href="index.html">
+  <link rel="alternate" hreflang="pt-BR" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="alternate" hreflang="x-default" href="index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LoL Idle">
+  <meta property="og:title" content="LoL Idle · Jogo idle de League of Legends grátis no navegador">
+  <meta property="og:description" content="Jogo idle de League of Legends grátis no navegador: escolha Darius, Ezreal, Lux, Yasuo, Katarina, Taric, Zac, Ryze, Aphelios, Sona, Shaco ou Rengar, cace sozinho em Summoner's Rift ou explore Runeterra com cidades, fortalezas e PvP. Sem baixar nada.">
+  <meta property="og:url" content="index.html">
+  <meta property="og:image" content="assets/img/site/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"LoL Idle","url":"https://lolidle.com/","description":"Jogo idle de League of Legends grátis no navegador: escolha Darius, Ezreal, Lux, Yasuo, Katarina, Taric, Zac, Ryze, Aphelios, Sona, Shaco ou Rengar, cace sozinho em Summoner's Rift ou explore Runeterra com cidades, fortalezas e PvP. Sem baixar nada.","image":"https://lolidle.com/assets/img/site/og.jpg","genre":["Idle","MMORPG","RPG"],"gamePlatform":"Web browser","applicationCategory":"Game","operatingSystem":"Any","playMode":["SinglePlayer","MultiPlayer"],"inLanguage":["pt-BR","en"],"offers":{"@type":"Offer","price":"0","priceCurrency":"BRL","availability":"https://schema.org/InStock"}}</script>
+  <!-- /seo -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Barlow:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <nav class="topo-moldura" aria-label="Principal">
+      <div class="topo-links">
+        <a href="#novidades">Novidades</a>
+        <a href="#ganhar">Ganhar dinheiro</a>
+        <a href="#arte">O jogo</a>
+        <a href="#modos">Runeterra</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="wiki.html">Wiki</a>
+      </div>
+      <a class="topo-emblema" href="#" aria-label="LoL Idle, início"><img src="assets/img/logo.png" alt=""></a>
+      <div class="topo-acoes">
+        <a class="botao botao-ouro" href="jogar.html#entrar">Entrar</a>
+        <a class="botao botao-contorno topo-criar" href="jogar.html#criar">Criar conta</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- destaque: o jogo de verdade rodando ao vivo, passando pelos mapas -->
+    <section class="heroi">
+      <div class="heroi-fundo" aria-hidden="true"></div>
+      <div class="heroi-texto">
+        <p class="heroi-categoria">MMORPG idle de League of Legends, grátis no navegador</p>
+        <h1>LoL Idle</h1>
+        <p class="heroi-chamariz">Seu campeão caça sozinho. Você monta a build, forja os itens e sobe no ranking.</p>
+        <p class="heroi-sub">Jogue com o Darius, o Ezreal, a Lux, o Yasuo, a Katarina, o Taric, o Zac, o Ryze, o Aphelios, a Sona, o Shaco ou o Rengar no Summoner's Rift, ou pegue o controle em Runeterra: um mundo aberto com cidades, fortalezas e outros jogadores.</p>
+        <div class="heroi-botoes">
+          <a class="botao botao-ouro botao-grande" href="jogar.html#entrar">Entrar</a>
+          <a class="botao botao-contorno botao-grande" href="jogar.html#criar">Criar conta</a>
+        </div>
+        <p class="heroi-convidado">Só quer experimentar? <a href="jogar.html#convidado">Jogar sem cadastro, como convidado</a></p>
+        <p class="heroi-online" id="heroi-online" hidden><i aria-hidden="true"></i><b id="n-online">0</b> <span>jogando agora</span></p>
+      </div>
+      <div class="heroi-demo">
+        <figure class="janela-jogo">
+          <div class="janela-jogo-barra"><span id="demo-local">Rota Inferior</span><span>ao vivo</span></div>
+          <canvas id="demo" aria-label="Demonstração do jogo: o Darius caçando monstros pelos mapas do Summoner's Rift"></canvas>
+          <figcaption class="janela-jogo-rodape">
+            <span>Abates nesta demonstração <b id="demo-abates">0</b></span>
+            <span>Ouro <b id="demo-ouro">0</b></span>
+            <span>Nível <b id="demo-nivel">48</b></span>
+          </figcaption>
+        </figure>
+        <div class="demo-lugares" id="demo-lugares" role="group" aria-label="Escolha o mapa da demonstração"></div>
+      </div>
+    </section>
+
+    <!-- números do servidor -->
+    <section class="numeros" aria-label="O jogo em números" id="numeros">
+      <div class="numero"><b id="n-campeoes">2</b><span id="n-campeoes-txt">campeões jogáveis, com skins para colecionar</span></div>
+      <div class="numero"><b id="n-zonas">8</b><span>zonas de caça, do nível 1 ao 50</span></div>
+      <div class="numero"><b id="n-monstros">15</b><span>tipos de monstros e chefes</span></div>
+      <div class="numero"><b id="n-cidades">3</b><span>cidades em Runeterra, com outros jogadores</span></div>
+    </section>
+
+    <!-- Discord: a comunidade e o presente de 1 dia de VIP (pelo botão Discord dentro do jogo) -->
+    <section class="faixa-discord" aria-labelledby="t-discord">
+      <span class="fd-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18.2 18.2 0 0 0-5.5 0L8.6 3a19.5 19.5 0 0 0-4.9 1.5C.6 9.1-.2 13.6.2 18.1a19.7 19.7 0 0 0 6 3l1.3-2a12.8 12.8 0 0 1-2-1l.5-.4a14 14 0 0 0 12 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.6 19.6 0 0 0 6-3c.5-5.2-.8-9.7-3.5-13.7zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg></span>
+      <div class="fd-texto">
+        <h2 id="t-discord">Entre no Discord do LoL Idle</h2>
+        <p>Novidades de cada atualização, lendários raros caindo na hora, guildas e ajuda para quem está começando. Entrando pelo botão Discord dentro do jogo, você ganha 1 dia de VIP.</p>
+      </div>
+      <a class="botao botao-discord" href="https://discord.gg/y2afMPdgaf" target="_blank" rel="noopener">Entrar no Discord</a>
+    </section>
+    <!-- promoção do VIP -->
+    <p class="faixa-promo"><b>🔥 Promoção</b> VIP de 30 dias por <s>R$ 10</s> <strong>R$ 4</strong>.</p>
+
+    <!-- novidades: as últimas atualizações (lidas de js/novidades.js, as mesmas que aparecem no jogo) -->
+    <section class="secao" id="novidades" aria-labelledby="t-novidades">
+      <h2 id="t-novidades">Novidades do jogo</h2>
+      <p class="secao-lead" id="novidades-lead">O LoL Idle recebe atualizações com frequência.</p>
+      <div class="nv" id="novidades-lista"></div>
+      <div class="nv-mais"><button type="button" class="botao botao-contorno" id="novidades-mais" hidden>Ver mais novidades</button></div>
+    </section>
+
+    <!-- ganhar dinheiro: a indicação (js/ganhos.js) -->
+    <section class="secao ganhar" id="ganhar" aria-labelledby="t-ganhar">
+      <h2 id="t-ganhar">Ganhe dinheiro jogando</h2>
+      <p class="secao-lead">Três jeitos de ganhar com o LoL Idle: vender itens raros por Gemas, indicar amigos e concorrer a VIP.</p>
+      <div class="ganhar-cartoes">
+        <article class="ganhar-cartao gemas">
+          <span class="ganhar-icone" aria-hidden="true">💠</span>
+          <h3>Venda itens por Gemas <span class="selo-rmt">RMT</span></h3>
+          <p class="ganhar-numero"><b>1.000</b> <span>Gemas valem 10 USDT</span></p>
+          <p>Caiu um item raro? Anuncie no Mercado por Gemas. Quem compra paga em Gemas, e você saca o valor em USDT, pela rede Solana, a partir de 1.000 Gemas. A taxa vai de 13% a 7,5%, menor nas vendas grandes.</p>
+        </article>
+        <article class="ganhar-cartao">
+          <span class="ganhar-icone" aria-hidden="true">🤝</span>
+          <h3>Indique amigos</h3>
+          <p class="ganhar-numero"><b id="g-comissao">20%</b> <span>de tudo o que eles gastarem</span></p>
+          <p>Dentro do jogo, no botão 💰, está o seu link. Cada amigo que criar a conta por ele vale uma parte de tudo o que gastar em diamantes, para sempre. O valor libera 30 dias depois da compra.</p>
+        </article>
+        <article class="ganhar-cartao sorteio">
+          <span class="ganhar-icone" aria-hidden="true">🎁</span>
+          <h3>Sorteio de VIP</h3>
+          <p class="ganhar-numero"><b>30</b> <span>dias de VIP a cada 10 amigos</span></p>
+          <p>A cada 10 pessoas que chegam pelo seu link, confirmam o email e passam do nível 5, uma delas ganha 30 dias de VIP. Os ganhadores aparecem no botão 💰, dentro do jogo.</p>
+        </article>
+      </div>
+      <p class="ganhar-nota">As Gemas só entram por depósito de USDT e só saem pelo saque em USDT, então toda Gema tem dinheiro de verdade por trás, e o caixa do projeto é público. A indicação é paga pela equipe, por PIX, para contas com email confirmado. Contas com trapaça perdem os ganhos. Não é salário nem investimento.</p>
+      <div class="chamada-botoes"><a class="botao botao-ouro botao-grande" href="jogar.html#entrar">Entrar</a><a class="botao botao-contorno botao-grande" href="jogar.html#criar">Criar conta</a></div>
+    </section>
+
+    <!-- arte nova: antes e agora, e uma galeria dos mapas -->
+    <section class="secao" id="arte" aria-labelledby="t-arte">
+      <h2 id="t-arte">O jogo ganhou arte nova</h2>
+      <p class="secao-lead">Todos os mapas foram redesenhados em pixel art, com rios, vilarejos, cavernas e bichos pelo cenário. Arraste a linha para comparar a Rota Inferior de antes e de agora.</p>
+      <div class="comparador" id="comparador" style="--pos: 50%">
+        <img src="assets/img/site/arte-antes.jpg" alt="A Rota Inferior com a arte antiga" width="908" height="604">
+        <img class="comparador-agora" src="assets/img/site/arte-agora.jpg" alt="A Rota Inferior com a arte nova: árvores, riacho, ponte de madeira e pedras" width="908" height="604">
+        <span class="comparador-linha" aria-hidden="true"></span>
+        <span class="comparador-etiqueta antes" aria-hidden="true">Antes</span>
+        <span class="comparador-etiqueta agora" aria-hidden="true">Agora</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Comparar a arte de antes e a de agora">
+      </div>
+      <div class="galeria">
+        <figure><img src="assets/img/site/fonte.jpg" alt="A Fonte, com o chafariz de cristal, a Soraka, o Lojista, o Ornn e os outros NPCs" loading="lazy" width="908" height="604"><figcaption><b>A Fonte</b>A base de todo mundo: cura, loja, forja e tarefas.</figcaption></figure>
+        <figure><img src="assets/img/site/rio.jpg" alt="O Rio, com a casa do pescador, o cais e as arraias na margem" loading="lazy" width="908" height="604"><figcaption><b>O Rio</b>Arraias e larvas do Vazio entre a mata e a água.</figcaption></figure>
+        <figure><img src="assets/img/site/barao.jpg" alt="O Covil do Barão, com cristais roxos e criaturas do Vazio" loading="lazy" width="908" height="604"><figcaption><b>Covil do Barão</b>O fim do mapa, do nível 40 ao 50.</figcaption></figure>
+        <figure><img src="assets/img/site/runeterra-cidade.jpg" alt="A praça de Demacia, com a Soraka, o Lojista e as casas de telhado azul" loading="lazy" width="908" height="604"><figcaption><b>Demacia</b>Uma das três cidades de Runeterra.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- fortalezas: chefe, chave e baú -->
+    <section class="secao dividida fortalezas" id="fortalezas">
+      <figure class="fortaleza-foto">
+        <img src="assets/img/site/fortaleza.jpg" alt="O Lobo Gigante, guardião da fortaleza, no alto da escada, enfrentando o campeão" loading="lazy" width="908" height="606">
+      </figure>
+      <div class="dividida-texto">
+        <h2>Fortalezas com chefe e baú</h2>
+        <p>Cada zona de Runeterra tem uma fortaleza no alto de uma escada. Lá em cima fica um guardião bem mais forte que os outros monstros.</p>
+        <ol class="passos">
+          <li><b>Vença o guardião.</b> A luta é longa, e o Dragão e o Barão pedem um campeão bem equipado ou ajuda.</li>
+          <li><b>Pegue a chave.</b> Ela fica girando em cima do corpo dele e vale 10 minutos.</li>
+          <li><b>Abra o baú.</b> Ouro, runas, espólios para vender e chance de item lendário.</li>
+        </ol>
+        <p class="fortaleza-nota">O baú é um só para o servidor inteiro e enche de novo a cada 10 minutos. Quem chegar primeiro leva.</p>
+      </div>
+    </section>
+
+    <!-- no navegador -->
+    <section class="secao dividida" id="jogo">
+      <div class="dividida-texto">
+        <h2>Abre no navegador e já começa a caçar</h2>
+        <p>Nada para instalar. Você escolhe o campeão e já está na Fonte. O visual é o dos MMORPGs clássicos em pixel art; o ritmo é de idle: com a aba aberta, mesmo minimizada, o campeão segue caçando, e com o jogo fechado ele ainda rende metade da sua média por até 5 horas.</p>
+        <ul class="selos">
+          <li>Sem download</li>
+          <li>Progresso salvo na sua conta</li>
+          <li>Funciona no celular</li>
+        </ul>
+      </div>
+      <figure class="navegador">
+        <div class="navegador-barra"><i></i><i></i><i></i><span>lolidle.com/jogar</span></div>
+        <img src="assets/img/site/cliente.jpg" alt="O jogo aberto no navegador: o Darius caçando no Fosso do Dragão, com os painéis de status, poções, habilidades e o console de mensagens" loading="lazy" width="1440" height="900">
+      </figure>
+    </section>
+
+    <!-- dois jeitos de caçar -->
+    <section class="secao" id="modos" aria-labelledby="t-modos">
+      <h2 id="t-modos">Dois jeitos de caçar</h2>
+      <div class="modos">
+        <article class="modo">
+          <canvas id="mini-mapa" aria-hidden="true"></canvas>
+          <div class="modo-texto">
+            <p class="modo-tag">Automático</p>
+            <h3>Summoner's Rift</h3>
+            <p>Escolha um lugar no mapa e o campeão caça sozinho: usa as habilidades da barra, junta o saque e volta para a Fonte quando a mochila enche.</p>
+            <ul><li>Oito regiões, da Rota Inferior ao Covil do Barão</li><li>Arauto, Dragão Infernal e Barão como chefes</li><li>Caça com a aba minimizada, e offline por até 5 horas</li></ul>
+          </div>
+        </article>
+        <article class="modo">
+          <img src="assets/img/site/runeterra-mapa.jpg" alt="Mapa de Runeterra: Demacia no sudoeste, Piltover no centro e Noxus no nordeste, com as zonas de caça e a faixa de nível de cada uma" loading="lazy">
+          <div class="modo-texto">
+            <p class="modo-tag">No controle</p>
+            <h3>Runeterra</h3>
+            <p>Aqui é você quem controla o campeão: clica com o botão direito para andar e atacar e usa Q, W, E e R mirando com o mouse. Quanto mais você se afasta de Demacia, mais fortes ficam os monstros e melhor fica o saque.</p>
+            <ul><li>+30% de experiência e de drop</li><li>Monte no Burrinho: ele sobe de nível enquanto você anda</li><li>Fortalezas com guardiões que marcam os golpes no chão</li><li>Zonas de Guerra: PK sempre ligado e +40% de experiência</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- bestiário: os monstros de verdade do jogo, animados -->
+    <section class="secao" id="bestiario" aria-labelledby="t-bestiario">
+      <h2 id="t-bestiario">Quem você vai encontrar pelo caminho</h2>
+      <p class="secao-lead">Cada região tem os seus monstros e uma faixa de nível. De vez em quando aparece um chefe, que dá trabalho, mas deixa os melhores itens.</p>
+      <div class="bestiario" id="bestiario-lista"></div>
+    </section>
+
+    <!-- recursos principais -->
+    <section class="secao" aria-labelledby="t-recursos">
+      <h2 id="t-recursos">O que mais tem para fazer</h2>
+      <p class="secao-lead">A caçada é só o começo. Tem itens para montar, chefes para derrubar e uma build para acertar.</p>
+      <div class="recursos">
+        <article class="recurso recurso-mapa">
+          <img src="assets/img/site/runeterra-cidade.jpg" alt="A praça de Demacia, com a Soraka, o Lojista e as casas de telhado azul" loading="lazy">
+          <h3>Cidades e outros jogadores</h3>
+          <p>Demacia, Piltover e Noxus são zonas seguras: ninguém luta, a vida volta rápido e dá para vender o saque. Fora delas, quem liga a caveira do PK pode atacar e ser atacado, sempre entre níveis parecidos.</p>
+        </article>
+        <article class="recurso">
+          <div class="recurso-icones" aria-hidden="true">
+            <img src="assets/img/itens/6631.png" alt=""><img src="assets/img/itens/3053.png" alt=""><img src="assets/img/itens/6610.png" alt="">
+          </div>
+          <h3>A bancada do Ornn</h3>
+          <p>Monstros derrubam itens de verdade do LoL, cada um com uma qualidade, de C a SS: um SS tem 70% a mais nos atributos que o mesmo item comum. Na bancada do Ornn você monta lendários e na bigorna forja até +5; da tentativa de +3 em diante, falhar pode fazer o item voltar um nível.</p>
+        </article>
+        <article class="recurso">
+          <div class="recurso-icones" aria-hidden="true">
+            <img src="assets/img/inimigos/riftherald.png" alt=""><img src="assets/img/inimigos/dragon_infernal.png" alt=""><img src="assets/img/inimigos/baron.png" alt="">
+          </div>
+          <h3>Chefes que pedem estratégia</h3>
+          <p>O Arauto prepara uma investida que só o Avanço Noxiano interrompe. O Dragão Infernal deixa o chão em chamas. O Barão invoca larvas e, derrotado, entrega a Mão do Barão por três minutos.</p>
+        </article>
+        <article class="recurso">
+          <div class="recurso-icones" aria-hidden="true">
+            <img src="assets/img/habilidades/Q.png" alt=""><img src="assets/img/habilidades/R.png" alt=""><img src="assets/img/habilidades/M.png" alt="">
+          </div>
+          <h3>Sua build, suas escolhas</h3>
+          <p>Doze habilidades, mas só 50 pontos para 110 ranks e quatro espaços na barra. No equipamento, uma bota e mais quatro itens. Some atributos, qualidade e refino, e o seu campeão luta diferente do de qualquer outro jogador.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- campeão -->
+    <section class="secao campeao" aria-labelledby="t-campeao">
+      <div class="campeao-arte" id="campeao-arte" aria-hidden="true">
+        <canvas id="campeao-sprite" width="128" height="128"></canvas>
+      </div>
+      <div class="campeao-texto">
+        <h2 id="t-campeao">Campeões</h2>
+        <div class="campeao-escolha" role="tablist" aria-label="Campeões disponíveis" id="campeao-escolha"></div>
+        <div id="campeao-painel" role="tabpanel" aria-live="polite">
+          <p class="campeao-nome" id="campeao-nome"></p>
+          <p id="campeao-resumo"></p>
+          <div class="campeao-habilidades" id="campeao-habilidades"></div>
+          <p class="campeao-skins" id="campeao-skins"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- sistemas em abas -->
+    <section class="secao" id="sistemas" aria-labelledby="t-sistemas">
+      <h2 id="t-sistemas">Os sistemas por trás da caçada</h2>
+      <div class="sistemas">
+        <div class="sistemas-abas" role="tablist" aria-label="Sistemas do jogo"></div>
+        <div class="sistemas-painel" role="tabpanel" id="sistemas-painel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ranking ao vivo -->
+    <section class="secao ranking" id="ranking" aria-labelledby="t-ranking">
+      <h2 id="t-ranking">Os maiores invocadores do servidor</h2>
+      <p class="secao-lead">Os três mais fortes do servidor, por nível. O ranking completo fica dentro do jogo.</p>
+      <ol class="ranking-lista" id="ranking-lista"><li class="ranking-vazio">Carregando o ranking…</li></ol>
+    </section>
+
+    <!-- dúvidas -->
+    <section class="secao duvidas" id="duvidas" aria-labelledby="t-duvidas">
+      <h2 id="t-duvidas">Dúvidas frequentes</h2>
+      <details><summary>Como eu começo a jogar?</summary><p>Já tem conta? Clique em Entrar. Se não tem, clique em Criar conta, escolha o nome, o email, a senha e o campeão, e confirme o código que chega no email. Para só experimentar, use Jogar sem cadastro: você entra como convidado e pode salvar o progresso depois, dentro do jogo. Na Fonte, abra o Mapa, escolha a Rota Inferior e o campeão começa a caçar sozinho.</p></details>
+      <details><summary>Ganho algum bônus para começar?</summary><p>Sim. Toda conta nova, inclusive de convidado, ganha 2 dias de VIP de presente: mais experiência e drop, e o automático de poções, para você conhecer o jogo inteiro desde o começo.</p></details>
+      <details><summary>Dá para ganhar dinheiro de verdade?</summary><p>Dá, de três jeitos. Vendendo itens por Gemas no Mercado e sacando o valor em USDT, pela rede Solana. Indicando amigos: você ganha 20% de tudo o que quem entrou pelo seu link gastar em diamantes, pago por PIX. E a cada 10 amigos que chegam pelo seu link, um deles ganha 30 dias de VIP. Tudo fica nos botões 💠 e 💰, dentro do jogo. Quem trapaceia perde os ganhos.</p></details>
+      <details><summary>O que são as Gemas (RMT)?</summary><p>É a moeda do jogo com valor real: 1.000 Gemas valem 10 USDT. Elas só entram por depósito de USDT na rede Solana e só saem pelo saque em USDT, a partir de 1.000 Gemas. Nenhuma Gema é criada pelo jogo: toda Gema foi depositada por um jogador, e o caixa do projeto fica aberto para qualquer um conferir. Os diamantes, comprados por PIX ou cartão, não viram dinheiro. Transferência em blockchain não tem estorno: confira o endereço e a rede antes de enviar.</p></details>
+      <details><summary>Tem Discord?</summary><p>Tem: <a href="https://discord.gg/y2afMPdgaf" target="_blank" rel="noopener">discord.gg/y2afMPdgaf</a>. Lá saem as novidades, os lendários raros que caem no servidor, os sorteios de VIP e as guildas recrutando. Se você entrar pelo botão Discord, dentro do jogo, ganha 1 dia de VIP (uma vez por conta).</p></details>
+      <details><summary>Tem wiki com a vida dos monstros e os itens?</summary><p>Tem: <a href="wiki.html">lolidle.com/wiki</a>. Lá estão a vida, o dano e a armadura de cada monstro por nível, os atributos de cada item por qualidade e refino, o que cai em cada zona com a chance, os chefes, os guardiões das fortalezas e as habilidades dos campeões. Os números saem direto do jogo. Dentro do jogo, é o botão 📖 ao lado do "?".</p></details>
+      <details><summary>Quanto custa?</summary><p>Nada. Dá para jogar do nível 1 ao 50 sem pagar. Quem quiser apoiar o projeto pode comprar diamantes, que servem só para a Loja: VIP e skins. Em promoção: o VIP de 30 dias sai por R$ 4. A vantagem do VIP é pequena de propósito.</p></details>
+      <details><summary>Preciso deixar o jogo aberto?</summary><p>Sim. O campeão só caça enquanto o jogo está aberto no navegador; ele pode ficar minimizado ou em outra aba. Fechar o jogo é como sair: nada acontece até você voltar. Sem VIP, as poções são usadas clicando nelas; com o VIP, ele bebe sozinho.</p></details>
+      <details><summary>Dá para jogar no celular?</summary><p>Dá. O Summoner's Rift funciona bem no celular, porque o campeão caça sozinho. Já Runeterra pede mouse e teclado, para andar e mirar as habilidades. O progresso fica na sua conta, então você pode alternar entre os dois.</p></details>
+      <details><summary>Quais campeões posso jogar?</summary><p>O Darius, a Mão de Noxus, que luta corpo a corpo; o Ezreal, o Explorador Pródigo, um atirador que acerta os monstros de longe; a Lux, a Dama da Luz, uma maga que usa o Poder de Habilidade e os itens de mago; o Yasuo, o Imperdoável, um espadachim sem mana, com o dobro de chance de crítico, que joga os monstros para o alto com o vento; a Katarina, a Lâmina Sinistra, uma assassina sem mana que joga adagas e, ao pegá-las, gira cortando todos em volta; o Taric, o Escudo de Valoran, um suporte tanque que cura a si mesmo e o grupo, dá escudos e deixa todos invulneráveis com o Resplendor Cósmico; o Zac, a Arma Secreta, um tanque de gosma sem mana que paga as habilidades com vida, se lança no meio dos monstros e se cura com os pedaços que se soltam dele; o Ryze, o Mago Rúnico, um mago de dano constante que marca os monstros com o Fluxo, dispara o Sobrecarregar sem parar e se teleporta com o Portal de Reinos; e o Aphelios, a Arma dos Devotos, um atirador com cinco armas da lua: duas na mão e três na fila, cada uma com a própria habilidade, trocando quando os tiros acabam; a Sona, a Mestra das Cordas, uma suporte com três canções que atacam, curam e aceleram; o Shaco, o Bufão Demoníaco, um assassino que some, engana com ilusões e espalha Caixinhas-Surpresa; e o Rengar, o Acossador da Alcateia, um caçador que salta da camuflagem e fica mais feroz a cada habilidade. Cada um tem doze habilidades e as próprias skins. Cada conta tem até 3 personagens, cada um com o próprio campeão: no jogo, o botão Personagens cria um novo e troca entre eles. Diamantes, VIP e skins compradas valem em todos. Os próximos campeões entram nas atualizações.</p></details>
+      <details><summary>O que é a qualidade dos itens?</summary><p>Todo item que cai vem com uma qualidade: C, B, A, S ou SS. Quanto melhor a qualidade, mais fortes os atributos do mesmo item (um SS tem 70% a mais que um comum) e mais o Lojista paga. SS é raríssimo, e quem consegue um lendário S ou SS é anunciado no chat do jogo.</p></details>
+      <details><summary>Vou ver outros jogadores?</summary><p>Sim. Na Fonte, quem estiver na base aparece com nome, título e nível. Em Runeterra você cruza com os outros pelo mapa, e com a caveira do PK ligada dá para lutar (até 7 níveis de diferença, nunca dentro das cidades). No Summoner's Rift cada jogador caça no seu próprio mapa.</p></details>
+      <details><summary>Dá para negociar itens com outros jogadores?</summary><p>Sim. No Mercado da Fonte você anuncia itens da mochila e compra o que os outros anunciaram, em ouro (taxa de 5%) ou em Gemas (taxa de 13% a 7,5%). O que você vende fica guardado até você recolher.</p></details>
+      <details><summary>O que é o VIP?</summary><p>Um jeito de apoiar o projeto. Com diamantes de doações, o VIP dá 20% a mais de experiência, de chance de drop e de chance de refino, libera as poções automáticas (o campeão bebe sozinho e volta para a Fonte quando elas acabam) e coloca uma ★ ao lado do nome. A vantagem é pequena de propósito: quem não é VIP joga o mesmo jogo, só um pouco mais devagar.</p></details>
+      <details><summary>Morrer custa caro?</summary><p>Um pouco: você perde 10% da experiência do nível. No Summoner’s Rift nenhum item cai. Em Runeterra cada item equipado tem 10% de chance de cair num saco no chão, onde você morreu (se quem te matou foi outro jogador, é 30% de chance de cair 1 item): volte lá para pegar, mas qualquer jogador que passar por cima também pega, e o saco some em 30 minutos. Quem mata jogadores sem motivo ganha a Caveira Vermelha e, se morrer, perde metade do que carrega. Fique de olho na vida e leve poções.</p></details>
+      <details><summary>Esqueci a senha. E agora?</summary><p>Na tela de Entrar, clique em Esqueci a senha e digite o email da sua conta. Chega um código de 6 números; com ele você cria uma senha nova e já entra no jogo.</p></details>
+      <details><summary>O jogo é oficial da Riot Games?</summary><p>Não. É um projeto de fã, sem fins lucrativos, feito por quem gosta de League of Legends e dos MMORPGs clássicos.</p></details>
+    </section>
+
+    <!-- chamada final -->
+    <section class="chamada">
+      <div class="chamada-fundo" aria-hidden="true"></div>
+      <h2>Seu personagem fica pronto em um minuto</h2>
+      <p>Crie a conta, escolha o campeão e você já aparece na Fonte, pronto para a primeira caçada.</p>
+      <div class="chamada-botoes"><a class="botao botao-ouro botao-grande" href="jogar.html#entrar">Entrar</a><a class="botao botao-contorno botao-grande" href="jogar.html#criar">Criar conta</a></div>
+      <p class="heroi-convidado chamada-convidado">Só quer experimentar? <a href="jogar.html#convidado">Jogar sem cadastro, como convidado</a></p>
+      <p class="chamada-social chamada-discord"><a href="https://discord.gg/y2afMPdgaf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18.2 18.2 0 0 0-5.5 0L8.6 3a19.5 19.5 0 0 0-4.9 1.5C.6 9.1-.2 13.6.2 18.1a19.7 19.7 0 0 0 6 3l1.3-2a12.8 12.8 0 0 1-2-1l.5-.4a14 14 0 0 0 12 0l.5.4c-.6.4-1.3.7-2 1l1.3 2a19.6 19.6 0 0 0 6-3c.5-5.2-.8-9.7-3.5-13.7zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg>Converse com a comunidade no Discord (e ganhe 1 dia de VIP pelo jogo)</a></p>
+      <p class="chamada-social"><a href="https://www.instagram.com/teamlolidle/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg>Acompanhe as novidades no Instagram: @teamlolidle</a></p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-colunas">
+      <div>
+        <img src="assets/img/logo.png" alt="" class="rodape-logo">
+        <p>O MMORPG idle de League of Legends, direto no navegador.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h3>Navegação</h3>
+        <a href="#novidades">Novidades</a>
+        <a href="#fortalezas">Fortalezas</a>
+        <a href="#modos">Runeterra</a>
+        <a href="#ranking">Ranking</a>
+        <a href="wiki.html">Wiki</a>
+        <a href="jogar.html">Jogar</a>
+      </nav>
+      <nav aria-label="Redes sociais">
+        <h3>Comunidade</h3>
+        <a href="https://discord.gg/y2afMPdgaf" target="_blank" rel="noopener">Discord</a>
+        <a href="https://www.instagram.com/teamlolidle/" target="_blank" rel="noopener">Instagram</a>
+        <a href="cdn-cgi/l/email-protection.html#eb8884859f8a9f84ab878487828f878ec5888486"><span class="__cf_email__" data-cfemail="22414d4c5643564d624e4d4e4b464e470c414d4f">[email&#160;protected]</span></a>
+      </nav>
+    </div>
+    <div class="rodape-legal">
+      <p>© 2026 LoL Idle. Projeto de fã CODIGO ABERTO PARA TODO MUNDO USAR, sem fins lucrativos.</p>
+      <p><a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos de uso</a></p>
+      <p>Músicas: RandomMind, The Cynic Project (cynicmusic.com) e Spring Spring, em domínio público (CC0), pelo OpenGameArt.org.</p>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="js/site.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"1c5649d8d7004c2791ee4f4f73d8f796","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+
+</html>
